@@ -1,0 +1,65 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+#game-container {
+  position: relative;
+  width: 100vw;
+  height: 300px;
+  border: 2px solid #000;
+  overflow: hidden;
+  background-color: #e0f7fa; /* Color de fondo azul claro */
+  background-image: url('snow-background.png'); /* Imagen de fondo opcional */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+
+#dino {
+  position: absolute;
+  bottom: 0;
+  left: 50px;
+  width: 150px; /* Ajusta el tamaño del personaje */
+  height: 150px;
+  background-image: url('penguin.png'); /* Cambia 'penguin.png' por el nombre de tu archivo */
+  background-size: cover; /* Asegúrate de que la imagen se ajuste al tamaño del div */
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@keyframes move {
+  from {
+    left: 100%; /* Empieza fuera del contenedor */
+  }
+  to {
+    left: -40px; /* Se mueve completamente fuera de la izquierda */
+  }
+}
+
+#obstacle {
+  position: absolute;
+  bottom: 0;
+  left: 100%; /* Posición inicial fuera del contenedor */
+  width: 40px;
+  height: 40px;
+  background-color: #ff6347;
+  animation: move 2s linear infinite; /* Movimiento continuo */
+}
+
+}
+
+#score {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 20px;
+  color: #000;
+}
+
+
+
