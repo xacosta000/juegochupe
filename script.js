@@ -5,7 +5,7 @@ const scoreDisplay = document.getElementById('score');
 let isJumping = false;
 let score = 0;
 
-// Función para el salto del dinosaurio
+// Función para el salto del dinosaurio/pingüino
 function jump() {
   if (isJumping) return;
   isJumping = true;
@@ -28,7 +28,7 @@ function jump() {
   }, 20);
 }
 
-// Función para detectar colisiones
+// Detectar colisiones
 function checkCollision() {
   const dinoRect = dino.getBoundingClientRect();
   const obstacleRect = obstacle.getBoundingClientRect();
@@ -61,12 +61,14 @@ function startCollisionCheck() {
   setInterval(checkCollision, 10);
 }
 
-// Escuchar eventos de teclado
+// Escuchar eventos de teclado y táctiles
 document.addEventListener('keydown', (e) => {
   if (e.code === 'Space') {
     jump();
   }
 });
+
+dino.addEventListener('touchstart', jump); // Evento táctil para móviles
 
 // Inicializar el juego
 updateScore();

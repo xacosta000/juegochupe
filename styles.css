@@ -24,13 +24,25 @@ body {
   position: absolute;
   bottom: 0;
   left: 50px;
-  width: 150px; /* Ajusta el tamaño del personaje */
-  height: 150px;
-  background-image: url('penguin.png'); /* Cambia 'penguin.png' por el nombre de tu archivo */
-  background-size: cover; /* Asegúrate de que la imagen se ajuste al tamaño del div */
+  width: 50px;
+  height: 50px;
+  background-image: url('penguin.png');
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  touch-action: manipulation; /* Mejora la respuesta táctil */
 }
+
+#dino::after {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  background: transparent;
+}
+
 
 @keyframes move {
   from {
